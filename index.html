@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Step Vanguard - Fitness RPG | Turn Steps into Power</title>
+  <meta name="description" content="Step Vanguard is the fitness RPG where your real-life steps become in-game power. Walk, level up, compete, and get healthier. Download now on Google Play.">
+  <meta name="keywords" content="Step Vanguard, fitness RPG, walking game, turn steps into XP, health RPG, exercise game, Google Play">
+  <meta name="author" content="Kaizenet">
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Step Vanguard - Fitness RPG">
+  <meta property="og:description" content="Turn your daily steps into RPG power. Walk, level up, and compete!">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://play.google.com/store/apps/details?id=com.kaizenet.stepvanguard">
+  <meta property="og:image" content="https://play-lh.googleusercontent.com/placeholder-image.jpg"> <!-- Replace with actual game icon/screenshot URL if available -->
+  <meta property="og:site_name" content="Step Vanguard">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0a0f1e 0%, #0c1222 100%);
+      color: #eef2ff;
+      line-height: 1.5;
+      padding: 1.5rem;
+      min-height: 100vh;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      background: rgba(18, 25, 45, 0.7);
+      backdrop-filter: blur(2px);
+      border-radius: 2.5rem;
+      overflow: hidden;
+      box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 2.5rem 2rem;
+      background: linear-gradient(115deg, #0f172a 0%, #111827 100%);
+      border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+    }
+
+    .hero-text {
+      flex: 2;
+      min-width: 240px;
+    }
+
+    .hero-icon {
+      flex: 1;
+      min-width: 180px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .game-icon {
+      width: 160px;
+      height: 160px;
+      background: linear-gradient(145deg, #facc15, #eab308);
+      border-radius: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 20px 35px -10px black;
+      transition: transform 0.2s ease;
+    }
+
+    .game-icon span {
+      font-size: 5rem;
+      font-weight: bold;
+      color: #0f172a;
+      text-shadow: 2px 2px 0 rgba(255,255,200,0.5);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(to right, #facc15, #f97316);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      margin-bottom: 0.5rem;
+    }
+
+    .tagline {
+      font-size: 1.3rem;
+      color: #cbd5e6;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+
+    .description {
+      font-size: 1rem;
+      margin: 1.2rem 0;
+      color: #cfdef5;
+    }
+
+    .features-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 1.5rem 0;
+      list-style: none;
+    }
+
+    .features-list li {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 0.4rem 1rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      backdrop-filter: blur(4px);
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: #1e293b;
+      border: 1px solid #facc15;
+      padding: 0.9rem 1.8rem;
+      border-radius: 60px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: #facc15;
+      text-decoration: none;
+      transition: all 0.2s;
+      margin-top: 0.5rem;
+    }
+
+    .cta-button:hover {
+      background: #facc15;
+      color: #0f172a;
+      border-color: #0f172a;
+      transform: scale(1.02);
+    }
+
+    /* Details Section */
+    .details {
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.8rem;
+    }
+
+    .card {
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(4px);
+      border-radius: 1.5rem;
+      padding: 1.5rem;
+      border-left: 3px solid #facc15;
+      transition: 0.2s;
+    }
+
+    .card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #facc15;
+    }
+
+    .card p, .card ul {
+      color: #cbd5f0;
+    }
+
+    .card ul {
+      padding-left: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    .card li {
+      margin: 0.6rem 0;
+    }
+
+    .badge {
+      background: #facc1522;
+      border-radius: 30px;
+      padding: 0.3rem 1rem;
+      font-size: 0.75rem;
+      display: inline-block;
+      color: #facc15;
+      margin-bottom: 0.8rem;
+    }
+
+    .store-link {
+      text-align: center;
+      margin: 1rem 0 2rem 0;
+    }
+
+    .google-play-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: #000000cc;
+      backdrop-filter: blur(8px);
+      padding: 12px 28px;
+      border-radius: 50px;
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      border: 1px solid #facc15;
+      transition: 0.2s;
+    }
+
+    .google-play-btn:hover {
+      background: #facc15;
+      color: #0f172a;
+      border-color: white;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.8rem;
+      color: #7e8aa8;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    @media (max-width: 680px) {
+      body {
+        padding: 0.8rem;
+      }
+      h1 {
+        font-size: 1.9rem;
+      }
+      .hero {
+        padding: 1.5rem;
+      }
+      .game-icon {
+        width: 110px;
+        height: 110px;
+      }
+      .game-icon span {
+        font-size: 3.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  
+  <!-- Hero section -->
+  <div class="hero">
+    <div class="hero-text">
+      <div class="badge">🎮 LAUNCHING NOW</div>
+      <h1>Step Vanguard</h1>
+      <div class="tagline">⚔️ Fitness RPG — turn your steps into power</div>
+      <p class="description">
+        The first real-life walking RPG where <strong>every step matters</strong>. 
+        Walk, climb stairs, do house chores — convert daily movement into XP, gold, 
+        and epic hero progression. Level up while getting fit. No marathon needed.
+      </p>
+      <ul class="features-list">
+        <li>🚶‍♂️ ➜ ⚔️ Steps → XP + Gold</li>
+        <li>💪 Upgrade skills & gear</li>
+        <li>🏆 Global leaderboards</li>
+        <li>🔥 Real health, real gains</li>
+      </ul>
+      <a href="https://play.google.com/store/apps/details?id=com.kaizenet.stepvanguard" class="cta-button" target="_blank" rel="noopener noreferrer">
+        📲 PLAY NOW ON GOOGLE PLAY
+      </a>
+    </div>
+    <div class="hero-icon">
+      <div class="game-icon">
+        <span>👟⚔️</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Feature details / RPG mechanics -->
+  <div class="details">
+    <div class="card">
+      <h3>🚶‍♂️ Walk → Fight</h3>
+      <p>Your real steps become attack power. Every 500 steps gives you XP to raise your Vanguard level.</p>
+      <ul>
+        <li>✅ Syncs with phone pedometer</li>
+        <li>✅ Works even with screen off</li>
+        <li>✅ Rewards from casual walking</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🏅 RPG Progression</h3>
+      <p>Unlock skills, equip gear, and face weekly in-game dungeons — all fueled by your daily activity.</p>
+      <ul>
+        <li>📈 30+ upgradable talents</li>
+        <li>⚔️ Boss fights based on step streaks</li>
+        <li>🎒 Gear that boosts step efficiency</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🌍 Leaderboards & Events</h3>
+      <p>Compete with friends or the whole community. Seasonal events reward real movement, not pay-to-win.</p>
+      <ul>
+        <li>🏆 Weekly step tournaments</li>
+        <li>👥 Guilds (walk together)</li>
+        <li>🎁 Free rewards every day</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Health + gaming quote -->
+  <div style="padding: 0 2rem 0.5rem 2rem;">
+    <div style="background: #facc1510; border-radius: 2rem; padding: 1rem 1.5rem; text-align: center; border: 1px solid #facc1530;">
+      <p style="font-style: italic; font-size: 1.05rem;">🔥 “Make your daily steps legendary. No gym needed — just your phone and your will.”</p>
+      <p style="margin-top: 0.6rem;">— <strong>Step Vanguard Team</strong></p>
+    </div>
+  </div>
+
+  <!-- Direct Store Button (redundant but effective) -->
+  <div class="store-link">
+    <a href="https://play.google.com/store/apps/details?id=com.kaizenet.stepvanguard" class="google-play-btn" target="_blank" rel="noopener noreferrer">
+      <span style="font-size: 1.6rem;">📱</span> GET IT ON Google Play
+    </a>
+    <p style="margin-top: 1rem; font-size: 0.8rem;">Free download · No marathon required · Works with your daily walk</p>
+  </div>
+
+  <!-- SEO & additional info -->
+  <footer>
+    <p>Step Vanguard - Fitness RPG | Turn real steps into in-game power</p>
+    <p style="margin-top: 0.3rem;">© 2026 Kaizenet · Walk, level up, compete · <a href="https://play.google.com/store/apps/details?id=com.kaizenet.stepvanguard" style="color:#facc15;">Official Google Play Store</a></p>
+    <p style="font-size: 0.7rem; margin-top: 0.5rem;">Keywords: step vanguard, fitness rpg, walking game, health game, google play rpg, exergame</p>
+  </footer>
+</div>
+</body>
+</html>
